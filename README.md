@@ -25,8 +25,10 @@ Une application web moderne et intuitive pour convertir, redimensionner et optim
 ### Interface Utilisateur
 - **Glisser-déposer** : Interface intuitive pour ajouter des images
 - **Aperçu en temps réel** : Visualisez vos images avant conversion
+- **Mode sombre** : Interface adaptée avec basculement automatique/manuel
 - **Design responsive** : Fonctionne sur desktop, tablette et mobile
 - **Interface en français** : Application entièrement localisée
+- **Accessibilité complète** : Conforme WCAG 2.1 AA, navigation clavier, lecteurs d'écran
 
 ## 📋 Prérequis
 
@@ -212,7 +214,7 @@ src/
 ## 🔧 Configuration
 
 ### Variables d'Environnement
-Aucune variable d'environnement n'est requise pour le fonctionnement de base.
+Aucune variable d'environnement n'est requise pour le fonctionnement de base. Le mode sombre utilise les préférences système et localStorage pour la persistance.
 
 ### Configuration Vite
 Le fichier `vite.config.ts` contient la configuration du bundler :
@@ -268,6 +270,12 @@ npm run preview
 - **Lecture** : JPG, PNG, GIF, BMP, TIFF, WebP, SVG
 - **Écriture** : JPG, PNG, WebP, PDF (basique)
 
+### Accessibilité
+- **Navigation clavier** : Support complet avec indicateurs de focus
+- **Lecteurs d'écran** : Compatible NVDA, JAWS, VoiceOver
+- **Contraste** : Ratios conformes WCAG 2.1 AA en modes clair et sombre
+- **Responsive** : Zones de touch 44px minimum, zoom 200% supporté
+
 ## 🐛 Dépannage
 
 ### Problèmes Courants
@@ -285,6 +293,11 @@ npm run preview
 - Réduisez le nombre d'images traitées simultanément
 - Utilisez des images de taille raisonnable (<10MB par image)
 - Fermez les autres onglets pour libérer de la mémoire
+
+### Problèmes d'accessibilité
+- Vérifiez que JavaScript est activé pour la navigation clavier
+- Utilisez un navigateur récent pour le support ARIA complet
+- Activez les annonces de lecteur d'écran si nécessaire
 
 ### Logs de Débogage
 Ouvrez la console du navigateur (F12) pour voir les messages d'erreur détaillés.
@@ -326,8 +339,10 @@ Pour obtenir de l'aide :
 - ✅ Redimensionnement intelligent
 - ✅ Traitement par lots
 - ✅ Interface glisser-déposer
+- ✅ Mode sombre avec détection automatique
 - ✅ Design responsive
 - ✅ Interface en français
+- ✅ Accessibilité WCAG 2.1 AA complète
 
 ---
 

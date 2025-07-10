@@ -17,7 +17,7 @@ export const ImagePreview: React.FC<ImagePreviewProps> = ({
   onDownload
 }) => {
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-200">
+    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-md transition-all duration-200">
       <div className="relative group">
         <img
           src={image.preview}
@@ -28,34 +28,37 @@ export const ImagePreview: React.FC<ImagePreviewProps> = ({
           <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex space-x-2">
             <button
               onClick={() => onEdit(image.id)}
-              className="p-2 bg-white rounded-full shadow-lg hover:bg-gray-50 transition-colors"
+              className="p-2 bg-white dark:bg-gray-700 rounded-full shadow-lg hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
               title="Modifier l'image"
+              aria-label="Modifier l'image"
             >
-              <Settings className="w-4 h-4 text-gray-700" />
+              <Settings className="w-4 h-4 text-gray-700 dark:text-gray-200" />
             </button>
             <button
               onClick={() => onDownload(image.id)}
-              className="p-2 bg-white rounded-full shadow-lg hover:bg-gray-50 transition-colors"
+              className="p-2 bg-white dark:bg-gray-700 rounded-full shadow-lg hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
               title="Télécharger l'image"
+              aria-label="Télécharger l'image"
             >
-              <Download className="w-4 h-4 text-gray-700" />
+              <Download className="w-4 h-4 text-gray-700 dark:text-gray-200" />
             </button>
             <button
               onClick={() => onRemove(image.id)}
-              className="p-2 bg-white rounded-full shadow-lg hover:bg-red-50 transition-colors"
+              className="p-2 bg-white dark:bg-gray-700 rounded-full shadow-lg hover:bg-red-50 dark:hover:bg-red-900 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500"
               title="Supprimer l'image"
+              aria-label="Supprimer l'image"
             >
-              <X className="w-4 h-4 text-red-600" />
+              <X className="w-4 h-4 text-red-600 dark:text-red-400" />
             </button>
           </div>
         </div>
       </div>
       
       <div className="p-4">
-        <h3 className="font-medium text-gray-900 truncate mb-2">
+        <h3 className="font-medium text-gray-900 dark:text-white truncate mb-2">
           {image.file.name}
         </h3>
-        <div className="space-y-1 text-sm text-gray-500">
+        <div className="space-y-1 text-sm text-gray-500 dark:text-gray-400">
           <div className="flex justify-between">
             <span>Taille :</span>
             <span>{formatFileSize(image.file.size)}</span>
@@ -66,7 +69,7 @@ export const ImagePreview: React.FC<ImagePreviewProps> = ({
           </div>
           <div className="flex justify-between">
             <span>Format :</span>
-            <span className="uppercase">{image.file.type.split('/')[1]}</span>
+            <span className="uppercase font-medium">{image.file.type.split('/')[1]}</span>
           </div>
         </div>
       </div>
