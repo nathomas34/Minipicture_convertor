@@ -55,7 +55,6 @@ function App() {
                 <ImageIcon className="w-8 h-8 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">
                 <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
                   Convertisseur d'Images Pro
                 </h1>
@@ -73,14 +72,14 @@ function App() {
                   <Zap className="w-4 h-4 text-yellow-500" />
                   <span>Traitement Rapide</span>
                 </div>
-              <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2">
                   <Settings className="w-4 h-4 text-blue-500" />
                   <span>Options Avancées</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Download className="w-4 h-4 text-green-500" />
-                <span>Formats Multiples</span>
-              </div>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Download className="w-4 h-4 text-green-500" />
+                  <span>Formats Multiples</span>
+                </div>
               </div>
             </div>
           </div>
