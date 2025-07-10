@@ -93,9 +93,10 @@ export const BatchConversionPanel: React.FC<BatchConversionPanelProps> = ({
                 className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
               <div className="flex justify-between text-xs text-gray-500 mt-1">
-              <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
-                <span>Faible</span>
-                <span>Élevée</span>
+                <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
+                  <span>Faible</span>
+                  <span>Élevée</span>
+                </div>
               </div>
             </div>
           )}
