@@ -84,7 +84,6 @@ export const ConversionPanel: React.FC<ConversionPanelProps> = ({
               alt={selectedImage.file.name}
               className="w-32 h-32 object-cover rounded-lg mx-auto shadow-sm"
             />
-            <p className="mt-2 text-sm text-gray-600 truncate">
             <p className="mt-2 text-sm text-gray-600 dark:text-gray-300 truncate">
               {selectedImage.file.name}
             </p>
